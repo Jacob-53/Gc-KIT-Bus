@@ -82,3 +82,4 @@ venv.bak/
 
 # Claude
 .claude/*
+.claude

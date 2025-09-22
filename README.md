@@ -70,8 +70,13 @@ cd backend
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 
+# 의존성 설치 준비
+pip install --upgrade pip
+
 # 의존성 설치
-pip install fastapi uvicorn sqlalchemy pydantic python-jose bcrypt python-multipart
+pip install -r requirements.txt 
+또는
+pip install fastapi uvicorn[standard] sqlalchemy alembic python-multipart python-jose[cryptography] passlib[bcrypt] python-dotenv pydantic pydantic-settings email-validator psycopg2-binary
 
 # 데모 데이터 초기화 (선택사항)
 python init_demo_data.py

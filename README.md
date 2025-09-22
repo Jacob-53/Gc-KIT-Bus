@@ -74,8 +74,9 @@ source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install --upgrade pip
 
 # 의존성 설치
-pip install -r requirements.txt 
-또는
+pip install -r requirements.txt
+ 
+# 또는
 pip install fastapi uvicorn[standard] sqlalchemy alembic python-multipart python-jose[cryptography] passlib[bcrypt] python-dotenv pydantic pydantic-settings email-validator psycopg2-binary
 
 # 데모 데이터 초기화 (선택사항)
@@ -83,6 +84,7 @@ python init_demo_data.py
 
 # 백엔드 서버 실행 (개발모드)
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
 # 또는
 python main.py
 ```
